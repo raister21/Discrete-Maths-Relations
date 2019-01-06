@@ -33,13 +33,10 @@ def symmetric():
 
 def transitive():
     x = 1
-    for (a, b) in R:
-
-        for j in R[x::]:
-            if b == j[0]:
-                chk = (a, j[1])
-                if chk in R:
-                    continue
+    for i in R:
+        for j in R[x::]:            
+            if i[1] == j[0]:
+                chk = (i[0],j[1])
                 if chk not in R:
                     return False
             
